@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale= 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <!--注意：不推荐在这里引用任何包和任何css文件-->
+
+    <!--因为main中的代码，涉及了ES6的新语法，但是浏览器不识别-->
+    <!--<script src="./main.js"></script>-->
+    <!--通过webpack 这么一个前端构建工具，把main.js做了一下处理，生成了一个bundle.js的文件-->
+
+    <!--当使用了html-webpack-plugin之后，我们不需要再手动处理bundle.js的引用路径了，因为这个插件已经帮我们自动创建了一个合适的script,并且引用了正确的路径-->
+    <!--<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">-->
+</head>
+<body>
+    <!--这是容器-->
+    <div id="app">
+    </div>
+</body>
+</html>
