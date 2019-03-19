@@ -1,15 +1,22 @@
 import VueRouter from 'vue-router'
-// 导入account组件
-import account from './main/Account.vue'
-import goodslist from './main/GoodsList.vue'
 
-//导入account里面的子组件
-import login from './subcome/login.vue'
-import register from './subcome/register.vue'
+//导入对应的路由组件
+import HomeContainer from './components/tabbar/HomeContainer.vue'
+import MemberContainer from './components/tabbar/MemberContainer.vue'
+import ShopcarContainer from './components/tabbar/ShopcarContainer.vue'
+import SearchContainer from './components/tabbar/SearchContainer.vue'
+
+
 //3.创建路由对象
 var router = new VueRouter({
     routes:[
-     ]
+         {path:'/',redirect:'/home'},
+         {path:'/home',component:HomeContainer},
+         {path:'/member',component:MemberContainer},
+         {path:'/shopcar',component:ShopcarContainer},
+         {path:'/search',component: SearchContainer},
+     ],
+     linkActiveClass:'mui-active'
 })
 
 //把路由对象暴露出去
